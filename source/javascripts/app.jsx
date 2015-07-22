@@ -10,13 +10,13 @@
 // -------------------------------------
 
 import React from 'react';
-import App from './components/app'
+import Quiz from './components/quiz'
 
 // -------------------------------------
 //   Base
 // -------------------------------------
 
 React.render(
-  <App />,
+  <Quiz />,
   document.getElementById( 'app' )
 );
