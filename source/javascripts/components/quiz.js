@@ -10,6 +10,7 @@
 
 import React from 'react';
 import Question from './question';
+import Results from './results';
 
 // -------------------------------------
 //   Base
@@ -21,7 +22,8 @@ export default class extends React.Component {
     super( props );
 
     this.state = {
-      current: 0
+      current: 0,
+      answers: []
     };
   }
 
