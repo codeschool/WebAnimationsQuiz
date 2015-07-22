@@ -43,7 +43,7 @@ export default class extends React.Component {
         </div>
       );
 
-    } else { return <p>The quiz is over.</p>; }
+    } else { return <Results />; }
   }
 
 }
