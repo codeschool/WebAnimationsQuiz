@@ -24,6 +24,10 @@ export default class extends React.Component {
     };
   }
 
+  _handleSubmit( event ) {
+    this.props.submitHandler( event );
+  }
+
   render() {
     var answers = this.props.answers.map( ( answer, index ) => {
       return(
@@ -37,6 +41,7 @@ export default class extends React.Component {
         <ul className='has-answer'>
           { answers }
         </ul>
+        <button onClick={ this._handleSubmit.bind( this ) }>Next Question</button>
       </div>
     );
   }

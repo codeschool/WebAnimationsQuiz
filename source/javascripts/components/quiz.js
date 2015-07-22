@@ -40,8 +40,10 @@ export default class extends React.Component {
       return(
         <div className='quiz'>
           <h1>Which Sweet Lands character are you?</h1>
-          <Question title={ question.title } answers={ question.answers } />
-          <button onClick={ this._handleSubmit.bind( this ) }>Next</button>
+          <Question
+            title={ question.title }
+            answers={ question.answers }
+            submitHandler={ this._handleSubmit.bind( this ) } />
         </div>
       );
 
