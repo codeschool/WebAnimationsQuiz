@@ -1,7 +1,7 @@
-Reaction
-========
+Web Animations Quiz
+===================
 
-A React application skeleton.
+A simple quiz application to determine what Sweet Lands character you are.
 
 Setup
 -----
