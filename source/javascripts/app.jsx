@@ -20,41 +20,36 @@ var questions = [
   {
     title   : 'This is the first question?',
     answers : [
-      'This is the first answer.',
-      'This is the second answer.',
-      'This is the third answer.',
+      'One',
+      'Two',
     ]
   },
   {
     title   : 'This is the second question?',
     answers : [
-      'This is the first answer.',
-      'This is the second answer.',
-      'This is the third answer.',
+      'Three',
+      'Four',
     ]
   },
   {
     title   : 'This is the third question?',
     answers : [
-      'This is the first answer.',
-      'This is the second answer.',
-      'This is the third answer.',
+      'Five',
+      'Six',
     ]
   },
   {
     title   : 'This is the fourth question?',
     answers : [
-      'This is the first answer.',
-      'This is the second answer.',
-      'This is the third answer.',
+      'Seven',
+      'Eight',
     ]
   },
   {
     title   : 'This is the fifth question?',
     answers : [
-      'This is the first answer.',
-      'This is the second answer.',
-      'This is the third answer.',
+      'Nine',
+      'Ten',
     ]
   },
 ];
