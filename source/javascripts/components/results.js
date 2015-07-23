@@ -87,7 +87,9 @@ export default class extends React.Component {
     return(
       <div className='results tac'>
         { this.state.results }
-        <Share />
+        <Share
+          text='I found out what character in Sweet Lands I am! You can, too!'
+          url='http://www.example.com' />
       </div>
     );
   }

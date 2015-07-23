@@ -20,13 +20,41 @@ export default class extends React.Component {
     super( props );
   }
 
+  _handleShare( service ) {
+    event.preventDefault();
+
+    var popup = {
+      height : 400,
+      width  : 575,
+      left   : 0,
+      top    : 0
+    };
+
+    var url     = '';
+    var options = `width=${ popup.width },height=${ popup.height },top=${ popup.top },left=${ popup.left }`;
+
+    switch ( service ) {
+      case 'twitter':
+        url = `https://twitter.com/share?text=${ this.props.text }&url=${ this.props.url }`;
+        break;
+      case 'facebook':
+        url = `https://www.facebook.com/sharer/sharer.php?u=${ this.props.url }`;
+        break;
+      case 'google':
+        url = `https://plus.google.com/share?url=${ this.props.url }`;
+        break;
+    }
+
+    window.open( url, service, options );
+  }
+
   render() {
     return(
       <div className='card card--b share'>
         <p className='share-msg'>Share your character with the world!</p>
-        <a className='btn share-link' href='#'>Twitter</a>
-        <a className='btn share-link' href='#'>Facebook</a>
-        <a className='btn share-link' href='#'>Google+</a>
+        <a className='btn share-link' onClick={ this._handleShare.bind( this, 'twitter' ) } href='#'>Twitter</a>
+        <a className='btn share-link' onClick={ this._handleShare.bind( this, 'facebook' ) } href='#'>Facebook</a>
+        <a className='btn share-link' onClick={ this._handleShare.bind( this, 'google' ) } href='#'>Google+</a>
       </div>
     );
   }
