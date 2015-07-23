@@ -32,8 +32,6 @@ export default class extends React.Component {
     var newAnswers = this.state.answers.concat( [ answer ] );
 
     this.setState({ current: next, answers: newAnswers });
-
-    console.log( this.state.answers );
   }
 
   render() {
