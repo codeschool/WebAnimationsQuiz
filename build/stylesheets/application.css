@@ -448,6 +448,26 @@ a {
     transform: translateY(-50%);
     width: 20px; }
 
+.brand {
+  display: block;
+  text-align: center; }
+
+.brand--bottom {
+  margin-top: 2.5em;
+  opacity: 0.45;
+  transition: 0.2s ease-in-out; }
+  .brand--bottom:active,
+  .brand--bottom:focus,
+  .brand--bottom:hover {
+    opacity: 1; }
+
+.brand--top {
+  margin-bottom: 2.5em; }
+
+.brand-img {
+  display: block;
+  margin: 0 auto; }
+
 .btn {
   background: #92539f;
   border-bottom: 4px solid rgba(0, 0, 0, 0.1);
