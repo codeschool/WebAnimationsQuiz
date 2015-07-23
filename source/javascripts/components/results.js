@@ -36,7 +36,7 @@ export default class extends React.Component {
 
     this.props.results.forEach( ( result, index ) => {
       if ( this._intersection( this.props.answers, result.answers ).length === 3 ) {
-        matches.push( 'You are character #' + result.character );
+        matches.push( 'You are character #' + result.character + '!' );
       }
     });
 
@@ -54,9 +54,8 @@ export default class extends React.Component {
     var results = this._getResults();
 
     return(
-      <div className='results'>
-        <p>The quiz is over. Here are your results:</p>
-        <h2>{ results }</h2>
+      <div className='results tac'>
+        <h1>{ results }</h1>
         <Share />
       </div>
     );

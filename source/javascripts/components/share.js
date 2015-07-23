@@ -22,11 +22,11 @@ export default class extends React.Component {
 
   render() {
     return(
-      <div className='share'>
-        <p>Share your character with the world!</p>
-        <a href='#'>Twitter</a>
-        <a href='#'>Facebook</a>
-        <a href='#'>Google+</a>
+      <div className='card card--b share'>
+        <p className='share-msg'>Share your character with the world!</p>
+        <a className='btn share-link' href='#'>Twitter</a>
+        <a className='btn share-link' href='#'>Facebook</a>
+        <a className='btn share-link' href='#'>Google+</a>
       </div>
     );
   }

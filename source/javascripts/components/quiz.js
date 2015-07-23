@@ -41,7 +41,6 @@ export default class extends React.Component {
 
       return(
         <div className='quiz'>
-          <h1>Which Sweet Lands character are you?</h1>
           <Question
             title={ question.title }
             answers={ question.answers }

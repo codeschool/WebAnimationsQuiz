@@ -1,5 +1,232 @@
+// *************************************
+//
+//   Application
+//   -> Manifest
+//
+// *************************************
+
+// -------------------------------------
+//   Imports
+// -------------------------------------
+
+@import 'http://fonts.googleapis.com/css?family=Open+Sans:400,700'
+@import 'reset'
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// ----- Colors ----- //
+
+$gray: #333
+$purple: #92539f
+$white: #fff
+
+$c-background: $purple
+$c-background-invert: $white
+$c-border: #ddd
+$c-primary: $purple
+$c-text: $gray
+$c-text-invert: $white
+
+// ----- Base ----- //
+
+$b-borderWidth: 2px
+$b-borderStyle: solid
+$b-border: $b-borderWidth $b-borderStyle $c-border
+$b-borderRadius: 6px
+$b-fontFamily: 'Open Sans', Helvetica, Arial, sans-serif
+$b-fontSize: 16px
+$b-fontSize-h1: 200%
+$b-fontSize-h2: 150%
+$b-fontSize-h3: 125%
+$b-fontSize-h4: 110%
+$b-lineHeight: 1.5
+$b-maxWidth: 40em
+$b-space: 1.25em
+$b-space-xs: $b-space * 0.25
+$b-space-s: $b-space * 0.5
+$b-space-l: $b-space * 2
+$b-space-xl: $b-space * 4
+$b-transition: 0.2s ease-in-out
+
+// -------------------------------------
+//   Tools
+// -------------------------------------
+
+.tac
+  text-align: center
+
+.tci
+  color: $c-text-invert
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+html
+  background: $c-background
+  color: $c-text
+  font-family: $b-fontFamily
+  font-size: $b-fontFamily
+
 body
-  background: white
-  color: black
-  font: 16px/1.5 Helvetica, Arial, sans-serif
-  padding: 4em
+  font-size: 100%
+
+ul, p
+  margin-bottom: $b-space
+  margin-top: 0
+
+li
+  margin-bottom: $b-space-s
+  margin-top: 0
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4
+  font-family: $b-fontFamily
+  font-weight: 700
+  line-height: 1.2
+  margin-bottom: $b-space-xs
+  margin-top: 0
+
+h1, .h1
+  font-size: $b-fontSize-h1
+  margin-bottom: $b-space
+
+h2, .h2
+  font-size: $b-fontSize-h2
+  margin-bottom: $b-space-s
+
+h3, .h3
+  font-size: $b-fontSize-h3
+
+h4, .h4
+  font-size: $b-fontSize-h4
+
+a
+  color: $c-primary
+  text-decoration: none
+  transition: $b-transition
+
+  &:active,
+  &:focus,
+  &:hover
+    color: darken($c-primary, 10%)
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+// ----- Answer ----- //
+
+.has-answer
+  list-style-type: none
+  margin: 0
+  margin-bottom: $b-space
+  padding: 0
+
+.answer
+  font-weight: 700
+
+.answer-link
+  border: $b-border
+  border-radius: $b-borderRadius
+  color: $c-text
+  display: block
+  padding: $b-space-s
+  padding-left: $b-space-l
+  position: relative
+
+  &:active,
+  &:focus,
+  &:hover,
+  &.is-selected
+    border-color: $c-primary
+    color: $c-text
+
+  &.is-selected
+
+    &::before
+      background: $c-primary
+      color: $c-text
+
+  &::before
+    $size: 20px
+    background: $c-border
+    border-radius: 50%
+    content: ''
+    display: block
+    height: $size
+    left: $b-space-s
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: $size
+
+// ----- Button ----- //
+
+.btn
+  background: $c-primary
+  border-bottom: 4px solid rgba(0, 0, 0, 0.1)
+  border-radius: 40px
+  border: 0
+  color: $c-text-invert
+  cursor: pointer
+  display: inline-block
+  font-weight: bold
+  line-height: 3
+  overflow: hidden
+  padding: 0 $b-space-l
+  position: relative
+  transition: all .4s
+
+  &:active,
+  &:focus,
+  &:hover
+    background: darken($c-primary, 10%)
+    color: $c-text-invert
+
+.btn[disabled]
+  opacity: 0.4
+
+  &:active,
+  &:focus,
+  &:hover
+    background: $c-primary
+    color: $c-text-invert
+
+// ----- Card ----- //
+
+.card
+  border-radius: $b-borderRadius
+  padding: $b-space
+  position: relative
+
+.card--a
+  background: $c-background-invert
+
+.card--b
+  border: $b-border
+
+.card--l
+  padding: $b-space-l
+
+// ----- Cell ----- //
+
+.cell
+  margin: 0 auto
+  margin-top: $b-space-xl
+  max-width: $b-maxWidth
+
+// ----- Share ----- //
+
+.share-link
+  margin-right: $b-space-s
+
+  &:last-child
+    margin-right: 0
+
+.share-msg
+  margin-bottom: $b-space

@@ -40,9 +40,14 @@ export default class extends React.Component {
 
   render() {
     var answers = this.props.answers.map( ( answer, index ) => {
+      var answerClassNames = this.state.selected && this.state.selection === answer ? 'answer-link is-selected' : 'answer-link';
+
       return(
         <li key={ index } className='answer'>
-          <a href='#' className='answer-link' onClick={ this._handleSelection.bind( this, answer ) }>
+          <a
+            href='#'
+            className={ answerClassNames }
+            onClick={ this._handleSelection.bind( this, answer ) }>
             { answer }
           </a>
         </li>
@@ -51,11 +56,15 @@ export default class extends React.Component {
 
     return(
       <div className='question'>
-        <h3>{ this.props.title }</h3>
+        <h2>{ this.props.title }</h2>
         <ul className='has-answer'>
           { answers }
         </ul>
-        <button onClick={ this._handleSubmit.bind( this ) } disabled={ !this.state.selected }>Next Question</button>
+        <button
+          className='btn'
+          onClick={ this._handleSubmit.bind( this ) } disabled={ !this.state.selected }>
+          Next Question
+        </button>
       </div>
     );
   }
