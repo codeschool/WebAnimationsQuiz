@@ -9,6 +9,7 @@
 // -------------------------------------
 
 import React from 'react';
+import Share from './share';
 
 // -------------------------------------
 //   Base
@@ -56,6 +57,7 @@ export default class extends React.Component {
       <div className='results'>
         <p>The quiz is over. Here are your results:</p>
         <h2>{ results }</h2>
+        <Share />
       </div>
     );
   }
