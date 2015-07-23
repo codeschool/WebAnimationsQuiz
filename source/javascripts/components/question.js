@@ -25,10 +25,14 @@ export default class extends React.Component {
   }
 
   _handleSelection( event ) {
+    event.preventDefault();
+
     this.setState( { selected: true } );
   }
 
   _handleSubmit( event ) {
+    event.preventDefault();
+
     this.props.submitHandler( event );
     this.setState( { selected: false } );
   }
