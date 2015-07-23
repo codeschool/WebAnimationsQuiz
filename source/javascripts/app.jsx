@@ -55,10 +55,37 @@ var questions = [
 ];
 
 // -------------------------------------
+//   Results
+// -------------------------------------
+
+var results = [
+  {
+    character : '1',
+    answers   : [ 'One', 'Three', 'Five' ]
+  },
+  {
+    character : '2',
+    answers   : [ 'Two', 'Four', 'Six' ]
+  },
+  {
+    character : '3',
+    answers   : [ 'One', 'Five', 'Nine' ]
+  },
+  {
+    character : '4',
+    answers   : [ 'Two', 'Six', 'Ten' ]
+  },
+  {
+    character : '5',
+    answers   : [ 'One', 'Six', 'Ten' ]
+  }
+];
+
+// -------------------------------------
 //   Base
 // -------------------------------------
 
 React.render(
-  <Quiz data={ questions } />,
+  <Quiz questions={ questions } results={ results } />,
   document.getElementById( 'app' )
 );

@@ -35,7 +35,7 @@ export default class extends React.Component {
   }
 
   render() {
-    var question = this.props.data[ this.state.current ];
+    var question = this.props.questions[ this.state.current ];
 
     if ( question ) {
 
@@ -49,7 +49,7 @@ export default class extends React.Component {
         </div>
       );
 
-    } else { return <Results data={ this.state.answers } />; }
+    } else { return <Results results={ this.props.results } answers={ this.state.answers } />; }
   }
 
 }
