@@ -20,20 +20,21 @@ export default class extends React.Component {
     super( props );
 
     this.state = {
-      selected: false
+      selected: false,
+      selection: null
     };
   }
 
-  _handleSelection( event ) {
+  _handleSelection( answer ) {
     event.preventDefault();
 
-    this.setState( { selected: true } );
+    this.setState( { selected: true, selection: answer } );
   }
 
-  _handleSubmit( event ) {
+  _handleSubmit() {
     event.preventDefault();
 
-    this.props.submitHandler( event );
+    this.props.submitHandler( this.state.selection );
     this.setState( { selected: false } );
   }
 
@@ -41,7 +42,7 @@ export default class extends React.Component {
     var answers = this.props.answers.map( ( answer, index ) => {
       return(
         <li key={ index } className='answer'>
-          <a href='#' className='answer-link' onClick={ this._handleSelection.bind( this ) }>
+          <a href='#' className='answer-link' onClick={ this._handleSelection.bind( this, answer ) }>
             { answer }
           </a>
         </li>

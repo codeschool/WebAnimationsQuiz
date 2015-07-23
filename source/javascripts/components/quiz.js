@@ -27,9 +27,13 @@ export default class extends React.Component {
     };
   }
 
-  _handleSubmit( event ) {
-    var next = ++this.state.current;
-    this.setState({ current: next });
+  _handleSubmit( answer ) {
+    var next       = ++this.state.current;
+    var newAnswers = this.state.answers.concat( [ answer ] );
+
+    this.setState({ current: next, answers: newAnswers });
+
+    console.log( this.state.answers );
   }
 
   render() {
@@ -47,7 +51,7 @@ export default class extends React.Component {
         </div>
       );
 
-    } else { return <Results />; }
+    } else { return <Results data={ this.state.answers } />; }
   }
 
 }
