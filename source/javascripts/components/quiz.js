@@ -48,7 +48,7 @@ export default class extends React.Component {
         </div>
       );
 
-    } else { return <Results results={ this.props.results } answers={ this.state.answers } />; }
+    } else { return <Results characters={ this.props.characters } answers={ this.state.answers } />; }
   }
 
 }

@@ -21,18 +21,13 @@ export default class extends React.Component {
     super( props );
 
     this.state = {
-      matches: [],
       results: null
     }
   }
 
   componentDidMount() {
-    var results = this._getResults();
-    this.setState( { results: results } );
-  }
-
-  _intersection( firstArray, secondArray ) {
-    return firstArray.filter( ( value ) => {  return secondArray.indexOf( value ) > -1; } );
+    var results = this._calculateResults();
+    this.setState( { results } );
   }
 
   _randomizer( array ) {
@@ -41,46 +36,44 @@ export default class extends React.Component {
     return array[ randomNumber ];
   }
 
-  _getResults() {
-    var matches  = []
-    var filename = '';
+  _calculateResults() {
+    var array      = this.props.answers,
+        matches    = {},
+        maxElement = array[0],
+        maxCount   = 1,
+        filename   = '';
 
-    this.props.results.forEach( ( result, index ) => {
-      if ( this._intersection( this.props.answers, result.answers ).length === 3 ) {
-        matches.push( result.character );
+    for( var i = 0; i < array.length; i++ ) {
+      var element = array[ i ];
+
+      if ( matches[ element ] == null ) {
+        matches[ element ] = 1;
+      } else {
+        matches[ element ]++;
       }
-    });
 
-    if ( matches.length === 0 ) {
-      filename = 'images/donut.svg';
-
-      return(
-        <div className='mbm'>
-          <h2 className='mbm'>You are the Donut!</h2>
-          <img src={ filename } alt='Donut' className='db mbm' />
-        </div>
-      );
-    } else if ( matches.length > 1 ) {
-      var randomMatches = this._randomizer( matches );
-
-      filename = `images/${ randomMatches.toLowerCase() }.svg`;
-
-      return(
-        <div className='mbm'>
-          <h2 className='mbm'>You are the { randomMatches }!</h2>
-          <img src={ filename } alt={ randomMatches } className='db mbm' />
-        </div>
-      );
-    } else {
-      filename = `images/${ matches[ 0 ].toLowerCase() }.svg`;
-
-      return(
-        <div className='mbm'>
-          <h2 className='mbm'>You are the { matches[ 0 ] }!</h2>
-          <img src={ filename } alt={ matches[ 0 ] } className='db mbm' />
-        </div>
-      );
+      if ( matches[ element ] > maxCount ) {
+        maxElement = element;
+        maxCount = matches[ element ];
+      }
+      else if ( matches[ element ] ==  maxCount) {
+        maxElement += '&' + element;
+        maxCount = matches[ element ];
+      }
     }
+
+    if ( maxElement.indexOf( '&' ) !== -1 ) {
+      maxElement = this._randomizer( maxElement.split( '&' ) );
+    }
+
+    filename = `images/${ maxElement.toLowerCase() }.svg`;
+
+    return(
+      <div className='mbm'>
+        <h2 className='mbm'>You are the { maxElement }!</h2>
+        <img src={ filename } alt={ maxElement } className='db mbm' />
+      </div>
+    );
   }
 
   render() {

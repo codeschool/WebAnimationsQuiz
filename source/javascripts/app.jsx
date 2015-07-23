@@ -13,6 +13,12 @@ import React from 'react';
 import Quiz from './components/quiz'
 
 // -------------------------------------
+//   Characters
+// -------------------------------------
+
+var characters = [ 'Unicorn', 'Rainbow', 'Cupcake', 'Donut' ];
+
+// -------------------------------------
 //   Questions
 // -------------------------------------
 
@@ -20,61 +26,48 @@ var questions = [
   {
     title   : 'This is the first question?',
     answers : [
-      'One',
-      'Two',
+      'Unicorn',
+      'Rainbow',
+      'Cupcake',
+      'Donut',
     ]
   },
   {
     title   : 'This is the second question?',
     answers : [
-      'Three',
-      'Four',
+      'Unicorn',
+      'Rainbow',
+      'Cupcake',
+      'Donut',
     ]
   },
   {
     title   : 'This is the third question?',
     answers : [
-      'Five',
-      'Six',
+      'Unicorn',
+      'Rainbow',
+      'Cupcake',
+      'Donut',
     ]
   },
   {
     title   : 'This is the fourth question?',
     answers : [
-      'Seven',
-      'Eight',
+      'Unicorn',
+      'Rainbow',
+      'Cupcake',
+      'Donut',
     ]
   },
   {
     title   : 'This is the fifth question?',
     answers : [
-      'Nine',
-      'Ten',
+      'Unicorn',
+      'Rainbow',
+      'Cupcake',
+      'Donut',
     ]
   },
-];
-
-// -------------------------------------
-//   Results
-// -------------------------------------
-
-var results = [
-  {
-    character : 'Unicorn',
-    answers   : [ 'One', 'Three', 'Five' ]
-  },
-  {
-    character : 'Rainbow',
-    answers   : [ 'Two', 'Four', 'Six' ]
-  },
-  {
-    character : 'Cupcake',
-    answers   : [ 'One', 'Five', 'Nine' ]
-  },
-  {
-    character : 'Donut',
-    answers   : [ 'Two', 'Six', 'Ten' ]
-  }
 ];
 
 // -------------------------------------
@@ -82,6 +75,6 @@ var results = [
 // -------------------------------------
 
 React.render(
-  <Quiz questions={ questions } results={ results } />,
+  <Quiz questions={ questions } characters={ characters } />,
   document.getElementById( 'app' )
 );
