@@ -19,6 +19,16 @@ export default class extends React.Component {
 
   constructor( props ) {
     super( props );
+
+    this.state = {
+      matches: [],
+      results: null
+    }
+  }
+
+  componentDidMount() {
+    var results = this._getResults();
+    this.setState( { results: results } );
   }
 
   _intersection( firstArray, secondArray ) {
@@ -32,30 +42,51 @@ export default class extends React.Component {
   }
 
   _getResults() {
-    var matches = [];
+    var matches  = []
+    var filename = '';
 
     this.props.results.forEach( ( result, index ) => {
       if ( this._intersection( this.props.answers, result.answers ).length === 3 ) {
-        matches.push( 'You are character #' + result.character + '!' );
+        matches.push( result.character );
       }
     });
 
     if ( matches.length === 0 ) {
-      return <span>You are a donut.</span>;
+      filename = 'images/donut.svg';
+
+      return(
+        <div className='mbm'>
+          <h2 className='mbm'>You are the Donut!</h2>
+          <img src={ filename } alt='Donut' className='db mbm' />
+        </div>
+      );
     } else if ( matches.length > 1 ) {
       var randomMatches = this._randomizer( matches );
-      return <span>{ randomMatches }</span>;
+
+      filename = `images/${ randomMatches.toLowerCase() }.svg`;
+
+      return(
+        <div className='mbm'>
+          <h2 className='mbm'>You are the { randomMatches }!</h2>
+          <img src={ filename } alt={ randomMatches } className='db mbm' />
+        </div>
+      );
     } else {
-      return <span>{ matches[ 0 ] }</span>;
+      filename = `images/${ matches[ 0 ].toLowerCase() }.svg`;
+
+      return(
+        <div className='mbm'>
+          <h2 className='mbm'>You are the { matches[ 0 ] }!</h2>
+          <img src={ filename } alt={ matches[ 0 ] } className='db mbm' />
+        </div>
+      );
     }
   }
 
   render() {
-    var results = this._getResults();
-
     return(
       <div className='results tac'>
-        <h1>{ results }</h1>
+        { this.state.results }
         <Share />
       </div>
     );

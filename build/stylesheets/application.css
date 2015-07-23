@@ -353,6 +353,9 @@ td,
 th {
   padding: 0; }
 
+.mbm {
+  margin-bottom: 1.25em; }
+
 .tac {
   text-align: center; }
 

@@ -60,24 +60,20 @@ var questions = [
 
 var results = [
   {
-    character : '1',
+    character : 'Unicorn',
     answers   : [ 'One', 'Three', 'Five' ]
   },
   {
-    character : '2',
+    character : 'Rainbow',
     answers   : [ 'Two', 'Four', 'Six' ]
   },
   {
-    character : '3',
+    character : 'Cupcake',
     answers   : [ 'One', 'Five', 'Nine' ]
   },
   {
-    character : '4',
+    character : 'Donut',
     answers   : [ 'Two', 'Six', 'Ten' ]
-  },
-  {
-    character : '5',
-    answers   : [ 'One', 'Six', 'Ten' ]
   }
 ];
 
