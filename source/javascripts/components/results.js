@@ -26,8 +26,10 @@ export default class extends React.Component {
   }
 
   componentDidMount() {
-    var results = this._calculateResults();
-    this.setState( { results } );
+    var results   = this._displayResults();
+    var character = this._calculateResults();
+
+    this.setState( { results, character } );
   }
 
   _randomizer( array ) {
@@ -66,12 +68,17 @@ export default class extends React.Component {
       maxElement = this._randomizer( maxElement.split( '&' ) );
     }
 
-    filename = `images/${ maxElement.toLowerCase() }.svg`;
+    return maxElement;
+  }
+
+  _displayResults() {
+    var character = this._calculateResults();
+    var filename  = `images/${ character.toLowerCase() }.svg`;
 
     return(
       <div className='mbm'>
-        <h2 className='mbm'>You are the { maxElement }!</h2>
-        <img src={ filename } alt={ maxElement } className='db mbm' />
+        <h2 className='mbm'>You are the { character }!</h2>
+        <img src={ filename } alt={ character } className='db mbm' />
       </div>
     );
   }
@@ -81,7 +88,7 @@ export default class extends React.Component {
       <div className='results tac'>
         { this.state.results }
         <Share
-          text='I found out what character in Sweet Lands I am! You can, too!'
+          text={ `I am the ${ this.state.character } in Sweet Lands! Find out what character you are!` }
           url='http://www.example.com' />
       </div>
     );
