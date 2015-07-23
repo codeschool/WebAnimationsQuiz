@@ -507,7 +507,8 @@ a {
   position: relative; }
 
 .card--a {
-  background: #fff; }
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
 
 .card--b {
   border: 2px solid #ddd; }
