@@ -450,6 +450,7 @@ a {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+    transition: 0.2s ease-in-out;
     width: 20px; }
 
 .brand {
