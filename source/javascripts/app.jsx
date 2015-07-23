@@ -23,7 +23,6 @@ var questions = [
       'This is the first answer.',
       'This is the second answer.',
       'This is the third answer.',
-      'This is the fourth answer.'
     ]
   },
   {
@@ -32,7 +31,6 @@ var questions = [
       'This is the first answer.',
       'This is the second answer.',
       'This is the third answer.',
-      'This is the fourth answer.'
     ]
   },
   {
@@ -41,7 +39,6 @@ var questions = [
       'This is the first answer.',
       'This is the second answer.',
       'This is the third answer.',
-      'This is the fourth answer.'
     ]
   },
   {
@@ -50,7 +47,6 @@ var questions = [
       'This is the first answer.',
       'This is the second answer.',
       'This is the third answer.',
-      'This is the fourth answer.'
     ]
   },
   {
@@ -59,7 +55,6 @@ var questions = [
       'This is the first answer.',
       'This is the second answer.',
       'This is the third answer.',
-      'This is the fourth answer.'
     ]
   },
 ];
