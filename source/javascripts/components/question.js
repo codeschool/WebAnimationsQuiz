@@ -44,9 +44,9 @@ export default class extends React.Component {
     this.setState( { selected: false } );
   }
 
-  // ----- Render ----- //
+  // ----- Render Answers ----- //
 
-  render() {
+  _renderAnswers() {
     var answers = this.props.answers.map( ( answer, index ) => {
       var answerClassNames = this.state.selected && this.state.selection === answer ? 'answer-link is-selected' : 'answer-link';
 
@@ -61,6 +61,14 @@ export default class extends React.Component {
         </li>
       );
     });
+
+    return answers;
+  }
+
+  // ----- Render ----- //
+
+  render() {
+    var answers = this._renderAnswers();
 
     return(
       <div className='question'>
