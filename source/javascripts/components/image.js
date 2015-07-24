@@ -36,7 +36,6 @@ export default class extends React.Component {
 
   componentDidMount() {
     var img    = React.findDOMNode( this.refs.img );
-    console.log( img );
     img.onload = this._onImageLoad.bind( this );
   }
 
