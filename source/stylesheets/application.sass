@@ -189,6 +189,8 @@ a
     opacity: 1
 
 .brand--top
+  animation: fadeInDownBig 1s 0.2s
+  animation-fill-mode: forwards
   margin-bottom: $b-space-l
 
 .brand-img
@@ -260,6 +262,20 @@ a
   margin: $b-space-l auto $b-space-xl
   max-width: $b-maxWidth
 
+// ----- Character ----- //
+
+.character
+  animation: bounceIn 1s 0.2s
+  animation-fill-mode: forwards
+  opacity: 0
+
+// ----- Main ----- //
+
+.main
+  animation: fadeInUp 0.8s 1.2s
+  animation-fill-mode: forwards
+  opacity: 0
+
 // ----- Share ----- //
 
 .share-link
@@ -270,3 +286,48 @@ a
 
 .share-msg
   margin-bottom: $b-space
+
+// -------------------------------------
+//   Animations
+// -------------------------------------
+
+// ----- Bounce In ----- //
+
+@keyframes bounceIn
+  0%, 20%, 40%, 60%, 80%, 100%
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
+  0%
+    opacity: 0
+    transform: scale3d(.3, .3, .3)
+  20%
+    transform: scale3d(1.1, 1.1, 1.1)
+  40%
+    transform: scale3d(.9, .9, .9)
+  60%
+    opacity: 1
+    transform: scale3d(1.03, 1.03, 1.03)
+  80%
+    transform: scale3d(.97, .97, .97)
+  100%
+    opacity: 1
+    transform: scale3d(1, 1, 1)
+
+// ----- Fade In Up ----- //
+
+@keyframes fadeInUp
+  0%
+    opacity: 0
+    transform: translate3d(0, 10%, 0)
+  100%
+    opacity: 1
+    transform: none
+
+// ----- Fade In Down Big ----- //
+
+@keyframes fadeInDownBig
+  0%
+    opacity: 0
+    transform: translate3d(0, -2000px, 0)
+  100%
+    opacity: 1
+    transform: none

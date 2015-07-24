@@ -78,7 +78,7 @@ export default class extends React.Component {
     return(
       <div className='mbm'>
         <h2 className='mbm'>You are the { character }!</h2>
-        <img src={ filename } alt={ character } className='db mbm' />
+        <img src={ filename } alt={ character } className='character db mbm' />
       </div>
     );
   }
