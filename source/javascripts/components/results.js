@@ -10,6 +10,7 @@
 
 import React from 'react';
 import Share from './share';
+import Image from './image';
 
 // -------------------------------------
 //   Base
@@ -88,7 +89,10 @@ export default class extends React.Component {
     return(
       <div className='mbm'>
         <h2 className='mbm'>You are the { character }!</h2>
-        <img src={ filename } alt={ character } className='character db mbm' />
+        <Image
+          src={ filename }
+          alt={ character }
+          className='character db mbm' />
       </div>
     );
   }

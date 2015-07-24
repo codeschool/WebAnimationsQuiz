@@ -534,11 +534,13 @@ a {
   max-width: 40em; }
 
 .character {
+  opacity: 0; }
+
+.character.is-loaded {
   -webkit-animation: bounceIn 1s 0.2s;
   animation: bounceIn 1s 0.2s;
   -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  opacity: 0; }
+  animation-fill-mode: forwards; }
 
 .main {
   -webkit-animation: fadeInUp 0.8s 1.2s;
