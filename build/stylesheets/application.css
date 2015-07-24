@@ -517,8 +517,7 @@ a {
   padding: 2.5em; }
 
 .cell {
-  margin: 0 auto;
-  margin-top: 5em;
+  margin: 2.5em auto 5em;
   max-width: 40em; }
 
 .share-link {
