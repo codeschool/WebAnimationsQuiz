@@ -493,6 +493,15 @@ a {
     background: #73427d;
     color: #fff; }
 
+.btn--b {
+  background: #de3a95;
+  line-height: 2.5; }
+  .btn--b:active,
+  .btn--b:focus,
+  .btn--b:hover {
+    background: #c4217b;
+    color: #fff; }
+
 .btn[disabled] {
   opacity: 0.4; }
   .btn[disabled]:active,

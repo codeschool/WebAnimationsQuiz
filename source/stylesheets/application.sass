@@ -19,6 +19,7 @@
 // ----- Colors ----- //
 
 $gray: #333
+$pink: #de3a95
 $purple: #92539f
 $white: #fff
 
@@ -26,6 +27,7 @@ $c-background: $purple
 $c-background-invert: $white
 $c-border: #ddd
 $c-primary: $purple
+$c-secondary: $pink
 $c-text: $gray
 $c-text-invert: $white
 
@@ -214,6 +216,16 @@ a
   &:focus,
   &:hover
     background: darken($c-primary, 10%)
+    color: $c-text-invert
+
+.btn--b
+  background: $c-secondary
+  line-height: 2.5
+
+  &:active,
+  &:focus,
+  &:hover
+    background: darken($c-secondary, 10%)
     color: $c-text-invert
 
 .btn[disabled]

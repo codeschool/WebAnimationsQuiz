@@ -52,9 +52,9 @@ export default class extends React.Component {
     return(
       <div className='card card--b share'>
         <p className='share-msg'>Share your character with the world!</p>
-        <a className='btn share-link' onClick={ this._handleShare.bind( this, 'twitter' ) } href='#'>Twitter</a>
-        <a className='btn share-link' onClick={ this._handleShare.bind( this, 'facebook' ) } href='#'>Facebook</a>
-        <a className='btn share-link' onClick={ this._handleShare.bind( this, 'google' ) } href='#'>Google+</a>
+        <a className='btn btn--b share-link' onClick={ this._handleShare.bind( this, 'twitter' ) } href='#'>Twitter</a>
+        <a className='btn btn--b share-link' onClick={ this._handleShare.bind( this, 'facebook' ) } href='#'>Facebook</a>
+        <a className='btn btn--b share-link' onClick={ this._handleShare.bind( this, 'google' ) } href='#'>Google+</a>
       </div>
     );
   }
