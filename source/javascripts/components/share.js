@@ -16,9 +16,13 @@ import React from 'react';
 
 export default class extends React.Component {
 
+  // ----- Constructor ----- //
+
   constructor( props ) {
     super( props );
   }
+
+  // ----- Handle Share ----- //
 
   _handleShare( service ) {
     event.preventDefault();
@@ -47,6 +51,8 @@ export default class extends React.Component {
 
     window.open( url, service, options );
   }
+
+  // ----- Render ----- //
 
   render() {
     return(

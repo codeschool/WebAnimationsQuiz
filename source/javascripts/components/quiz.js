@@ -18,6 +18,8 @@ import Results from './results';
 
 export default class extends React.Component {
 
+  // ----- Constructor ----- //
+
   constructor( props ) {
     super( props );
 
@@ -27,12 +29,16 @@ export default class extends React.Component {
     };
   }
 
+  // ----- Handle Submit ----- //
+
   _handleSubmit( answer ) {
     var next       = ++this.state.current;
     var newAnswers = this.state.answers.concat( [ answer ] );
 
     this.setState({ current: next, answers: newAnswers });
   }
+
+  // ----- Render ----- //
 
   render() {
     var question = this.props.questions[ this.state.current ];

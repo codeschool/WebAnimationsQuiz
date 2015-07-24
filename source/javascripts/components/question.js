@@ -16,6 +16,8 @@ import React from 'react';
 
 export default class extends React.Component {
 
+  // ----- Constructor ----- //
+
   constructor( props ) {
     super( props );
 
@@ -25,11 +27,15 @@ export default class extends React.Component {
     };
   }
 
+  // ----- Handle Selection ----- //
+
   _handleSelection( answer ) {
     event.preventDefault();
 
     this.setState( { selected: true, selection: answer } );
   }
+
+  // ----- Handle Submit ----- //
 
   _handleSubmit() {
     event.preventDefault();
@@ -37,6 +43,8 @@ export default class extends React.Component {
     this.props.submitHandler( this.state.selection );
     this.setState( { selected: false } );
   }
+
+  // ----- Render ----- //
 
   render() {
     var answers = this.props.answers.map( ( answer, index ) => {

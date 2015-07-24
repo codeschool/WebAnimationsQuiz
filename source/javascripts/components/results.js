@@ -17,6 +17,8 @@ import Share from './share';
 
 export default class extends React.Component {
 
+  // ----- Constructor ----- //
+
   constructor( props ) {
     super( props );
 
@@ -25,6 +27,8 @@ export default class extends React.Component {
     }
   }
 
+  // ----- Component Did Mount ----- //
+
   componentDidMount() {
     var results   = this._displayResults();
     var character = this._calculateResults();
@@ -32,11 +36,15 @@ export default class extends React.Component {
     this.setState( { results, character } );
   }
 
+  // ----- Randomizer ----- //
+
   _randomizer( array ) {
     var randomNumber;
     randomNumber = Math.floor( Math.random() * array.length );
     return array[ randomNumber ];
   }
+
+  // ----- Calculate Results ----- //
 
   _calculateResults() {
     var array      = this.props.answers,
@@ -71,6 +79,8 @@ export default class extends React.Component {
     return maxElement;
   }
 
+  // ----- Display Results ----- //
+
   _displayResults() {
     var character = this._calculateResults();
     var filename  = `images/${ character.toLowerCase() }.svg`;
@@ -82,6 +92,8 @@ export default class extends React.Component {
       </div>
     );
   }
+
+  // ----- Render ----- //
 
   render() {
     return(
