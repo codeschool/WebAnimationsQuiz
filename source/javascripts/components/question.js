@@ -76,11 +76,13 @@ export default class extends React.Component {
         <ul className='has-answer'>
           { answers }
         </ul>
-        <button
-          className='btn'
-          onClick={ this._handleSubmit.bind( this ) } disabled={ !this.state.selected }>
-          Next Question
-        </button>
+        <div className='tac tal--m'>
+          <button
+            className='btn'
+            onClick={ this._handleSubmit.bind( this ) } disabled={ !this.state.selected }>
+            Next Question
+          </button>
+        </div>
       </div>
     );
   }
