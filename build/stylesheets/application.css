@@ -553,6 +553,7 @@ img {
   max-width: 40em; }
 
 .character {
+  margin: 0 auto;
   opacity: 0; }
 
 .character.is-loaded {
