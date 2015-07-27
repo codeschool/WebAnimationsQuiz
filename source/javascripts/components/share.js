@@ -55,8 +55,10 @@ export default class extends React.Component {
   // ----- Render ----- //
 
   render() {
+    var classNames = this.props.imageLoaded ? 'card card--b share is-loaded' : 'card card--b share';
+
     return(
-      <div className='card card--b share'>
+      <div className={ classNames }>
         <p className='share-msg'>Share your character with the world!</p>
         <a className='btn btn--b share-link' onClick={ this._handleShare.bind( this, 'twitter' ) } href='#'>Twitter</a>
         <a className='btn btn--b share-link' onClick={ this._handleShare.bind( this, 'facebook' ) } href='#'>Facebook</a>

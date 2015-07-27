@@ -29,6 +29,7 @@ export default class extends React.Component {
   // ----- On Image Load ----- //
 
   _onImageLoad() {
+    this.props.onImageLoad();
     this.setState( { loaded: true } );
   }
 

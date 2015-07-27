@@ -24,7 +24,8 @@ export default class extends React.Component {
     super( props );
 
     this.state = {
-      results: null
+      results     : null,
+      imageLoaded : false
     }
   }
 
@@ -35,6 +36,12 @@ export default class extends React.Component {
     var character = this._calculateResults();
 
     this.setState( { results, character } );
+  }
+
+  // ----- On Image Load ----- //
+
+  _onImageLoad() {
+    this.setState( { imageLoaded: true } );
   }
 
   // ----- Randomizer ----- //
@@ -92,7 +99,8 @@ export default class extends React.Component {
         <Image
           src={ filename }
           alt={ character }
-          className='character db mbm' />
+          className='character db mbm'
+          onImageLoad={ this._onImageLoad.bind( this ) } />
       </div>
     );
   }
@@ -104,6 +112,7 @@ export default class extends React.Component {
       <div className='results tac'>
         { this.state.results }
         <Share
+          imageLoaded= { this.state.imageLoaded }
           text={ `I am the ${ this.state.character } in Sweet Lands! Find out what character you are!` }
           url='http://www.example.com' />
       </div>
