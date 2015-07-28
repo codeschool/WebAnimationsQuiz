@@ -55,6 +55,8 @@ export default class extends React.Component {
         ref='img'
         src={ this.props.src }
         alt={ this.props.alt }
+        width={ this.props.width }
+        height={ this.props.height }
         className={ classNames } />
     );
   }

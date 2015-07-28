@@ -68,7 +68,7 @@ $b-fontSize-h2: 150%
 $b-fontSize-h3: 125%
 $b-fontSize-h4: 110%
 $b-lineHeight: 1.5
-$b-maxWidth: 44em
+$b-maxWidth: 50em
 $b-space: 1.25em
 $b-space-xs: $b-space * 0.25
 $b-space-s: $b-space * 0.5
@@ -88,6 +88,9 @@ $b-transition: 0.2s ease-in-out
 
 .tci
   color: $c-text-invert
+
+.tss
+  font-size: 90%
 
 +respond-to($b-breakpoint-m)
 
@@ -236,6 +239,24 @@ img
   display: block
   margin: 0 auto
 
+// ----- Bucket ----- //
+
+.bucket
+  display: table
+
+.bucket-content
+  display: table-cell
+  vertical-align: middle
+  width: 10000px
+
+.bucket-media
+  float: left
+  margin-right: $b-space
+
+  > img
+    display: block
+    max-width: none
+
 // ----- Button ----- //
 
 .btn
@@ -316,6 +337,14 @@ img
   animation: bounceIn 1s 0.2s
   animation-fill-mode: forwards
 
+.character-description
+  font-size: 90%
+  opacity: 0
+  transition: 0.4s 0.6s ease-in-out
+
+.character-description.is-loaded
+  opacity: 1
+
 // ----- Character List ----- //
 
 .characterList
@@ -327,7 +356,7 @@ img
 .characterList-item
   display: block
   float: left
-  min-height: 200px
+  min-height: 210px // FIXME: Magic number!
   position: relative
   width: 25%
 
@@ -366,6 +395,7 @@ img
 
 .share
   opacity: 0
+  text-align: center
   transition: 0.4s 0.6s ease-in-out
 
 .share.is-loaded

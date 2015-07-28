@@ -58,6 +58,7 @@ export default class extends React.Component {
 
       return(
         <Results
+          descriptions={ this.props.descriptions }
           answerKey={ this.props.answerKey }
           characters={ this.props.characters }
           answers={ this.state.answers } />

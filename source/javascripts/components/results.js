@@ -110,20 +110,43 @@ export default class extends React.Component {
     return maxElement;
   }
 
+  // ----- Get Description ----- //
+
+  _getDescription( character ) {
+    var description = '';
+
+    this.props.descriptions.forEach( ( item, index ) => {
+      if ( this.state.character == item.character ) {
+        description = item.description;
+      }
+    });
+
+    return description;
+  }
+
   // ----- Display Results ----- //
 
   _displayResults() {
-    var character = this._calculateResults();
-    var filename  = `images/${ character.toLowerCase() }.svg`;
+    var character          = this._calculateResults(),
+        filename           = `images/${ character.toLowerCase() }.svg`,
+        descriptionClasses = this.state.imageLoaded ? 'character-description is-loaded' : 'character-description';
 
     return(
-      <div className='mbm'>
-        <h2 className='mbm'>You are the { character }!</h2>
-        <Image
-          src={ filename }
-          alt={ character }
-          className='character db mbm'
-          onImageLoad={ this._onImageLoad.bind( this ) } />
+      <div className='bucket group mbm'>
+        <div className='bucket-media'>
+          <Image
+            src={ filename }
+            alt={ character }
+            className='character db mbm'
+            width='250'
+            onImageLoad={ this._onImageLoad.bind( this ) } />
+        </div>
+        <div className='bucket-content'>
+          <p
+            className={ descriptionClasses }
+            dangerouslySetInnerHTML={{ __html: this._getDescription() }}>
+          </p>
+        </div>
       </div>
     );
   }
@@ -134,7 +157,7 @@ export default class extends React.Component {
     var results = this._displayResults();
 
     return(
-      <div className='results tac'>
+      <div className='results'>
         { results }
         <Share
           imageLoaded= { this.state.imageLoaded }

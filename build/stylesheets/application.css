@@ -367,6 +367,9 @@ th {
 .tci {
   color: #fff; }
 
+.tss {
+  font-size: 90%; }
+
 @media screen and (min-width: 768px) {
   .tal--m {
     text-align: left; } }
@@ -496,6 +499,21 @@ img {
   display: block;
   margin: 0 auto; }
 
+.bucket {
+  display: table; }
+
+.bucket-content {
+  display: table-cell;
+  vertical-align: middle;
+  width: 10000px; }
+
+.bucket-media {
+  float: left;
+  margin-right: 1.25em; }
+  .bucket-media > img {
+    display: block;
+    max-width: none; }
+
 .btn {
   background: #92539f;
   border-bottom: 4px solid rgba(0, 0, 0, 0.1);
@@ -555,7 +573,7 @@ img {
 
 .cell {
   margin: 2.5em auto 5em;
-  max-width: 44em; }
+  max-width: 50em; }
 
 .character {
   margin: 0 auto;
@@ -567,6 +585,14 @@ img {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
 
+.character-description {
+  font-size: 90%;
+  opacity: 0;
+  transition: 0.4s 0.6s ease-in-out; }
+
+.character-description.is-loaded {
+  opacity: 1; }
+
 .characterList {
   list-style-type: none;
   margin: 0;
@@ -576,7 +602,7 @@ img {
 .characterList-item {
   display: block;
   float: left;
-  min-height: 200px;
+  min-height: 210px;
   position: relative;
   width: 25%; }
   .characterList-item:last-child {
@@ -612,6 +638,7 @@ img {
 
 .share {
   opacity: 0;
+  text-align: center;
   transition: 0.4s 0.6s ease-in-out; }
 
 .share.is-loaded {

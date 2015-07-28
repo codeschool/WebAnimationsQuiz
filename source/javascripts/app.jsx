@@ -119,11 +119,35 @@ var answerKey = [
 ];
 
 // -------------------------------------
+//   Descriptions
+// -------------------------------------
+
+var descriptions = [
+  {
+    character   : 'Unicorn',
+    description : "<strong>You are Sparkles the Unicorn!</strong> You’re sweet, optimistic, and see the best in everyone — even if they don’t think candy is a food group. Your positivity lights your path and keeps you going on the darkest days (i.e., when your candy runs out). When you come down from your sugar high, be sure to play Adventures in Web Animations — coming soon!"
+  },
+  {
+    character   : 'Rainbow',
+    description : "<strong>You are Pierre the Rainbow!</strong> You’re sarcastic, smart, and always up for an adventure — but you’d prefer to float solo. You may have your head in the clouds, but your feet are firmly on Lemony Brick Road. See Pierre in action when you play Adventures in Web Animations — coming soon!"
+  },
+  {
+    character   : 'Cupcake',
+    description : "<strong>You are Sweetheart the Cupcake!</strong> You’re loyal, friendly, and love a big party — especially if it means meeting lots of new people. You’re up for anything, as long as you’re surrounded by 50 of your closest friends. Keep up with Sweetheart and share your skills when you play Adventures in Web Animations — coming soon!"
+  },
+  {
+    character   : 'Donut',
+    description : "<strong>You are Beau Knut the Donut!</strong> You’re sassy, determined, and sometimes a little too smart for your own sprinkles. You don’t have a problem outsmarting the Tangy Tart Trickster as he tries to halt your progress on the way to Frosting Fortress. Put your smarts to the test when you play Adventures in Web Animations — coming soon!"
+  }
+];
+
+// -------------------------------------
 //   Base
 // -------------------------------------
 
 React.render(
   <App
+    descriptions={ descriptions }
     answerKey={ answerKey }
     questions={ questions }
     characters={ characters }
