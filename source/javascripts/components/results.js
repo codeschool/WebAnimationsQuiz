@@ -43,14 +43,6 @@ export default class extends React.Component {
     this.setState( { imageLoaded: true } );
   }
 
-  // ----- Randomizer ----- //
-
-  _randomizer( array ) {
-    var randomNumber;
-    randomNumber = Math.floor( Math.random() * array.length );
-    return array[ randomNumber ];
-  }
-
   // ----- Calculate Answers ----- //
 
   _calculateAnswers() {
@@ -104,7 +96,7 @@ export default class extends React.Component {
     }
 
     if ( maxElement.indexOf( '&' ) !== -1 ) {
-      maxElement = this._randomizer( maxElement.split( '&' ) );
+      maxElement = maxElement.split( '&' )[0];
     }
 
     return maxElement;
