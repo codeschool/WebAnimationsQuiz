@@ -28,6 +28,13 @@
   @media #{$media} and ($query: $val)
     @content
 
+// ----- Clearfix ----- //
+
+.group::after
+  clear: both
+  content: ''
+  display: table
+
 // -------------------------------------
 //   Variables
 // -------------------------------------
@@ -61,7 +68,7 @@ $b-fontSize-h2: 150%
 $b-fontSize-h3: 125%
 $b-fontSize-h4: 110%
 $b-lineHeight: 1.5
-$b-maxWidth: 40em
+$b-maxWidth: 44em
 $b-space: 1.25em
 $b-space-xs: $b-space * 0.25
 $b-space-s: $b-space * 0.5
@@ -308,6 +315,45 @@ img
 .character.is-loaded
   animation: bounceIn 1s 0.2s
   animation-fill-mode: forwards
+
+// ----- Character List ----- //
+
+.characterList
+  list-style-type: none
+  margin: 0
+  margin-bottom: $b-space
+  padding: 0
+
+.characterList-item
+  display: block
+  float: left
+  min-height: 200px
+  position: relative
+  width: 25%
+
+  &:last-child
+    padding-right: 0
+
+  img
+    display: block
+    left: 50%
+    margin-bottom: $b-space-s
+    position: absolute
+    top: 0
+    transform: translateX(-50%)
+    width: 90%
+
+.characterList-item--unicorn img,
+.characterList-item--rainbow img
+  top: 30px
+
+.characterList-item-title
+  bottom: 0
+  font-weight: bold
+  position: absolute
+  text-align: center
+  text-transform: uppercase
+  width: 100%
 
 // ----- Main ----- //
 

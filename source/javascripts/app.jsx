@@ -10,13 +10,14 @@
 // -------------------------------------
 
 import React from 'react';
-import Quiz from './components/quiz'
+import App from './components/app';
 
 // -------------------------------------
 //   Characters
 // -------------------------------------
 
-var characters = [ 'Unicorn', 'Rainbow', 'Cupcake', 'Donut' ];
+var characters     = [ 'Unicorn', 'Rainbow', 'Cupcake', 'Donut' ];
+var characterNames = [ 'Sparkles', 'Pierre', 'Sweetheart', 'Beau Knut' ];
 
 // -------------------------------------
 //   Questions
@@ -75,6 +76,10 @@ var questions = [
 // -------------------------------------
 
 React.render(
-  <Quiz questions={ questions } characters={ characters } />,
+  <App
+    questions={ questions }
+    characters={ characters }
+    characterNames={ characterNames } />,
+
   document.getElementById( 'app' )
 );

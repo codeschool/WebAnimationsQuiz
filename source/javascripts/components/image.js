@@ -29,7 +29,10 @@ export default class extends React.Component {
   // ----- On Image Load ----- //
 
   _onImageLoad() {
-    this.props.onImageLoad();
+    if ( this.props.onImageLoad ) {
+      this.props.onImageLoad();
+    }
+
     this.setState( { loaded: true } );
   }
 
@@ -43,7 +46,9 @@ export default class extends React.Component {
   // ----- Render ----- //
 
   render() {
-    var classNames = this.state.loaded ? `${ this.props.className } is-loaded` : this.props.className;
+    if ( this.props.className ) {
+      var classNames = this.state.loaded ? `${ this.props.className } is-loaded` : this.props.className;
+    }
 
     return(
       <img
