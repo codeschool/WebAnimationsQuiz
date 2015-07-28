@@ -65,6 +65,7 @@ export default class extends React.Component {
 
       return(
         <Quiz
+          answerKey={ this.props.answerKey }
           questions={ this.props.questions }
           characters={ this.props.characters } />
       );

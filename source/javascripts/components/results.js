@@ -24,7 +24,7 @@ export default class extends React.Component {
     super( props );
 
     this.state = {
-      results     : null,
+      character   : null,
       imageLoaded : false
     }
   }
@@ -32,10 +32,9 @@ export default class extends React.Component {
   // ----- Component Did Mount ----- //
 
   componentDidMount() {
-    var results   = this._displayResults();
     var character = this._calculateResults();
 
-    this.setState( { results, character } );
+    this.setState( { character } );
   }
 
   // ----- On Image Load ----- //
@@ -52,10 +51,34 @@ export default class extends React.Component {
     return array[ randomNumber ];
   }
 
+  // ----- Calculate Answers ----- //
+
+  _calculateAnswers() {
+    var matches   = [],
+        answers   = this.props.answers,
+        answerKey = this.props.answerKey;
+
+    answers.forEach( ( answer, index) => {
+      var originAnswer = answer;
+
+      answerKey.forEach( ( item, index ) => {
+
+        item.answers.forEach( ( answer, index ) => {
+          if( originAnswer == answer ) {
+            matches.push( item.character );
+          }
+        });
+
+      });
+    });
+
+    return matches;
+  }
+
   // ----- Calculate Results ----- //
 
   _calculateResults() {
-    var array      = this.props.answers,
+    var array      = this._calculateAnswers(),
         matches    = {},
         maxElement = array[0],
         maxCount   = 1,
@@ -108,9 +131,11 @@ export default class extends React.Component {
   // ----- Render ----- //
 
   render() {
+    var results = this._displayResults();
+
     return(
       <div className='results tac'>
-        { this.state.results }
+        { results }
         <Share
           imageLoaded= { this.state.imageLoaded }
           text={ `I am the ${ this.state.character } in Sweet Lands! Find out what character you are!` }

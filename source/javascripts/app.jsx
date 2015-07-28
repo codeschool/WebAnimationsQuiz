@@ -25,50 +25,97 @@ var characterNames = [ 'Sparkles', 'Pierre', 'Sweetheart', 'Beau Knut' ];
 
 var questions = [
   {
-    title   : 'This is the first question?',
+    title   : 'What do you value the most?',
     answers : [
-      'Unicorn',
-      'Rainbow',
-      'Cupcake',
-      'Donut',
+      'Intelligence',
+      'Friendship',
+      'Power',
+      'Candy',
     ]
   },
   {
-    title   : 'This is the second question?',
+    title   : 'If you could live anywhere, where would you choose?',
     answers : [
-      'Unicorn',
-      'Rainbow',
-      'Cupcake',
-      'Donut',
+      'New York City',
+      'Iceland',
+      'Iowa',
+      'A field of lollipops',
     ]
   },
   {
-    title   : 'This is the third question?',
+    title   : 'Your friends would say you’re…',
     answers : [
-      'Unicorn',
-      'Rainbow',
-      'Cupcake',
-      'Donut',
+      'Sweet',
+      'Sarcastic',
+      'Supportive',
+      'I don’t have any friends',
     ]
   },
   {
-    title   : 'This is the fourth question?',
+    title   : 'You have a day to yourself — how do you spend it?',
     answers : [
-      'Unicorn',
-      'Rainbow',
-      'Cupcake',
-      'Donut',
+      'All by myself',
+      'Outsmarting someone',
+      'Hanging out with friends',
+      'Eating candy',
     ]
   },
   {
-    title   : 'This is the fifth question?',
+    title   : 'What are you most afraid of?',
     answers : [
-      'Unicorn',
-      'Rainbow',
-      'Cupcake',
-      'Donut',
+      'Socializing',
+      'Being alone',
+      'Not living up to my full potential',
+      'Running out of candy',
     ]
   },
+];
+
+// -------------------------------------
+//   Answer Key
+// -------------------------------------
+
+var answerKey = [
+  {
+    character : 'Unicorn',
+    answers   : [
+      'Candy',
+      'A field of lollipops',
+      'Supportive',
+      'Eating candy',
+      'Running out of candy'
+    ]
+  },
+  {
+    character : 'Rainbow',
+    answers   : [
+      'Power',
+      'Iceland',
+      'I don’t have any friends',
+      'All by myself',
+      'Socializing'
+    ]
+  },
+  {
+    character : 'Cupcake',
+    answers   : [
+      'Friendship',
+      'Iowa',
+      'Sweet',
+      'Hanging out with friends',
+      'Being alone'
+    ]
+  },
+  {
+    character : 'Donut',
+    answers   : [
+      'Intelligence',
+      'New York City',
+      'Sarcastic',
+      'Outsmarting someone',
+      'Not living up to my full potential'
+    ]
+  }
 ];
 
 // -------------------------------------
@@ -77,6 +124,7 @@ var questions = [
 
 React.render(
   <App
+    answerKey={ answerKey }
     questions={ questions }
     characters={ characters }
     characterNames={ characterNames } />,
