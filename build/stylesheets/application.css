@@ -361,6 +361,9 @@ th {
 .mbm {
   margin-bottom: 1.25em; }
 
+.mbl {
+  margin-bottom: 2.5em; }
+
 .tac {
   text-align: center; }
 
@@ -378,7 +381,8 @@ html {
   background: #92539f;
   color: #333;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  line-height: 1.5; }
 
 body {
   font-size: 100%; }
