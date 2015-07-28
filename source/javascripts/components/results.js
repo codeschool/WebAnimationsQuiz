@@ -132,7 +132,7 @@ export default class extends React.Component {
         descriptionClasses = this.state.imageLoaded ? 'character-description is-loaded' : 'character-description';
 
     return(
-      <div className='bucket group mbm'>
+      <div className='bucket group mbl'>
         <div className='bucket-media'>
           <Image
             src={ filename }
@@ -161,7 +161,7 @@ export default class extends React.Component {
         { results }
         <Share
           imageLoaded= { this.state.imageLoaded }
-          text={ `I am the ${ this.state.character } in Sweet Lands! Find out what character you are!` }
+          text={ `I just got a sneak peek at @codeschool’s new course, Adventures in Web Animations, by taking this sweet quiz:` }
           url='http://www.example.com' />
       </div>
     );
