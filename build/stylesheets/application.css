@@ -358,6 +358,9 @@ th {
   content: '';
   display: table; }
 
+.mbf {
+  margin-bottom: 0; }
+
 .mbm {
   margin-bottom: 1.25em; }
 
@@ -374,6 +377,8 @@ th {
   font-size: 90%; }
 
 @media screen and (min-width: 768px) {
+  .mbl--m {
+    margin-bottom: 2.5em; }
   .tal--m {
     text-align: left; } }
 
@@ -503,20 +508,23 @@ img {
   display: block;
   margin: 0 auto; }
 
-.bucket {
-  display: table; }
-
 .bucket-content {
   display: table-cell;
   vertical-align: middle;
   width: 10000px; }
 
-.bucket-media {
-  float: left;
-  margin-right: 1.25em; }
-  .bucket-media > img {
-    display: block;
-    max-width: none; }
+.bucket-media > img {
+  display: block;
+  margin-bottom: 1.25em;
+  max-width: none; }
+
+@media screen and (min-width: 768px) {
+  .bucket {
+    display: table; }
+  .bucket-media {
+    float: left;
+    margin-bottom: 0;
+    margin-right: 1.25em; } }
 
 .btn {
   background: #92539f;

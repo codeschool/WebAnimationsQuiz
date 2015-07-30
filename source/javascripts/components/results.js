@@ -121,10 +121,10 @@ export default class extends React.Component {
   _displayResults() {
     var character          = this._calculateResults(),
         filename           = `images/${ character.toLowerCase() }.svg`,
-        descriptionClasses = this.state.imageLoaded ? 'character-description is-loaded' : 'character-description';
+        descriptionClasses = this.state.imageLoaded ? 'character-description is-loaded mbf' : 'character-description mbf';
 
     return(
-      <div className='bucket group mbl'>
+      <div className='bucket group mbm mbl--m'>
         <div className='bucket-media'>
           <Image
             src={ filename }

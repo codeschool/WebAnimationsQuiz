@@ -81,6 +81,8 @@ $b-transition: 0.2s ease-in-out
 //   Tools
 // -------------------------------------
 
+.mbf
+  margin-bottom: 0
 .mbm
   margin-bottom: $b-space
 .mbl
@@ -96,6 +98,9 @@ $b-transition: 0.2s ease-in-out
   font-size: 90%
 
 +respond-to($b-breakpoint-m)
+
+  .mbl--m
+    margin-bottom: $b-space-l
 
   .tal--m
     text-align: left
@@ -245,21 +250,29 @@ img
 
 // ----- Bucket ----- //
 
-.bucket
-  display: table
-
 .bucket-content
   display: table-cell
   vertical-align: middle
   width: 10000px
 
 .bucket-media
-  float: left
-  margin-right: $b-space
 
   > img
     display: block
+    margin-bottom: $b-space
     max-width: none
+
+// Responsiveness
+
++respond-to($b-breakpoint-m)
+
+  .bucket
+    display: table
+
+  .bucket-media
+    float: left
+    margin-bottom: 0
+    margin-right: $b-space
 
 // ----- Button ----- //
 
