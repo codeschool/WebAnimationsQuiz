@@ -16,7 +16,7 @@ import Image from './image';
 //   Base
 // -------------------------------------
 
-export default class extends React.Component {
+export default class Results extends React.Component {
 
   // ----- Constructor ----- //
 

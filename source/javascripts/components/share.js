@@ -14,7 +14,7 @@ import React from 'react';
 //   Base
 // -------------------------------------
 
-export default class extends React.Component {
+export default class Share extends React.Component {
 
   // ----- Constructor ----- //
 

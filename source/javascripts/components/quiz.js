@@ -16,7 +16,7 @@ import Results from './results';
 //   Base
 // -------------------------------------
 
-export default class extends React.Component {
+export default class Quiz extends React.Component {
 
   // ----- Constructor ----- //
 
