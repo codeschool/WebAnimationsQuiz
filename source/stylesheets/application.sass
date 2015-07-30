@@ -60,6 +60,7 @@ $b-borderWidth: 2px
 $b-borderStyle: solid
 $b-border: $b-borderWidth $b-borderStyle $c-border
 $b-borderRadius: 6px
+$b-breakpoint-s: 500px
 $b-breakpoint-m: 768px
 $b-fontFamily: 'Open Sans', Helvetica, Arial, sans-serif
 $b-fontSize: 16px
@@ -358,34 +359,50 @@ img
 
 .characterList-item
   display: block
-  float: left
-  min-height: 210px // FIXME: Magic number!
   position: relative
-  width: 25%
 
   &:last-child
     padding-right: 0
 
   img
     display: block
-    left: 50%
-    margin-bottom: $b-space-s
-    position: absolute
-    top: 0
-    transform: translateX(-50%)
-    width: 90%
+    margin: 0 auto $b-space-s
+    width: 40%
 
 .characterList-item--unicorn img,
 .characterList-item--rainbow img
   top: 30px
 
 .characterList-item-title
-  bottom: 0
   font-weight: bold
-  position: absolute
   text-align: center
   text-transform: uppercase
   width: 100%
+
+// Responsiveness
+
++respond-to($b-breakpoint-s)
+
+  .characterList-item img
+    width: 50%
+
++respond-to($b-breakpoint-m)
+
+  .characterList-item
+    float: left
+    min-height: 210px // FIXME: Magic number!
+    width: 25%
+
+    img
+      left: 50%
+      position: absolute
+      top: 0
+      transform: translateX(-50%)
+      width: 90%
+
+  .characterList-item-title
+    bottom: 0
+    position: absolute
 
 // ----- Main ----- //
 
