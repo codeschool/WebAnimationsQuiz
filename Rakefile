@@ -12,6 +12,7 @@ desc 'Generate flat files with Middleman'
 task :generate do
   puts '-- Generating site with Middleman --'
   system './bin/middleman build --clean'
+  system 'cp CNAME build/'
   cd 'build' do
     system 'git init'
     system "git remote add origin #{ REPO_URL }"
