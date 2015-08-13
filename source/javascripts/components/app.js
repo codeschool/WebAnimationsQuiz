@@ -79,12 +79,12 @@ export default class App extends React.Component {
         <div>
           <p className='mbl'>
             Are you ready for a sweet adventure? Our upcoming course,
-            <strong> Adventures in Web Animations</strong>, is based around
-            Sweet Lands — a candy-coated game made up of different lands and
-            characters, all leading to Frosting Fortress. In preparation for
-            your sugary journey through the world of web animations, take
-            this quiz to find out which Sweet Lands character represents you
-            best!
+            <a href='https://www.codeschool.com/courses/adventures-in-web-animations'> Adventures in Web Animations</a>,
+            is based around Sweet Lands — a candy-coated game made up of
+            different lands and characters, all leading to Frosting Fortress.
+            In preparation for your sugary journey through the world of web
+            animations, take this quiz to find out which Sweet Lands character
+            represents you best!
           </p>
           <ul className='characterList group'>
             { characters }

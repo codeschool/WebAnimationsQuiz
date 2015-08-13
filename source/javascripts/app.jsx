@@ -122,6 +122,8 @@ var answerKey = [
 //   Descriptions
 // -------------------------------------
 
+var courseUrl = 'https://www.codeschool.com/courses/adventures-in-web-animations';
+
 var descriptions = [
   {
     character   : 'Unicorn',
@@ -131,7 +133,7 @@ var descriptions = [
       and see the best in everyone — even if they don’t think candy is a food
       group. Your positivity lights your path and keeps you going on the
       darkest days (i.e., when your candy runs out).  When you come down from
-      your sugar high, be sure to play <a href='#'>Adventures in Web Animations</a>
+      your sugar high, be sure to play <a href='${ courseUrl }'>Adventures in Web Animations</a>
       — coming soon!
       `
   },
@@ -142,7 +144,7 @@ var descriptions = [
       <strong>You are Pierre the Rainbow!</strong> You’re sarcastic, smart, and
       always up for an adventure — but you’d prefer to float solo. You may have
       your head in the clouds, but your feet are firmly on Lemony Brick Road.
-      See Pierre in action when you play <a href='#'>Adventures in Web Animations</a>
+      See Pierre in action when you play <a href='${ courseUrl }'>Adventures in Web Animations</a>
       — coming soon!
       `
   },
@@ -154,7 +156,7 @@ var descriptions = [
       and love a big party — especially if it means meeting lots of new people.
       You’re up for anything, as long as you’re surrounded by 50 of your
       closest friends. Keep up with Sweetheart and share your skills when you
-      play <a href='#'>Adventures in Web Animations</a> — coming soon!
+      play <a href='${ courseUrl }'>Adventures in Web Animations</a> — coming soon!
       `
   },
   {
@@ -165,7 +167,7 @@ var descriptions = [
       and sometimes a little too smart for your own sprinkles. You don’t have a
       problem outsmarting the Tangy Tart Trickster as he tries to halt your
       progress on the way to Frosting Fortress. Put your smarts to the test
-      when you play <a href='#'>Adventures in Web Animations</a> — coming soon!
+      when you play <a href='${ courseUrl }'>Adventures in Web Animations</a> — coming soon!
       `
   }
 ];
