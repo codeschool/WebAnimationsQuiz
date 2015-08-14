@@ -30,7 +30,7 @@ export default class App extends React.Component {
 
   // ----- Handle Click ----- //
 
-  _handleClick() {
+  _handleClick( event ) {
     event.preventDefault();
 
     this.setState( { quizStarted: true } );

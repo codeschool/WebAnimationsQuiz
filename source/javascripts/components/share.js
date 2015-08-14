@@ -24,7 +24,7 @@ export default class Share extends React.Component {
 
   // ----- Handle Share ----- //
 
-  _handleShare( service ) {
+  _handleShare( service, event ) {
     event.preventDefault();
 
     var popup = {

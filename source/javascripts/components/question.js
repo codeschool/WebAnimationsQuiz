@@ -29,7 +29,7 @@ export default class Question extends React.Component {
 
   // ----- Handle Selection ----- //
 
-  _handleSelection( answer ) {
+  _handleSelection( answer, event ) {
     event.preventDefault();
 
     this.setState( { selected: true, selection: answer } );
@@ -37,7 +37,7 @@ export default class Question extends React.Component {
 
   // ----- Handle Submit ----- //
 
-  _handleSubmit() {
+  _handleSubmit( event ) {
     event.preventDefault();
 
     this.props.submitHandler( this.state.selection );
