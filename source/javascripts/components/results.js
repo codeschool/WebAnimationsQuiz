@@ -154,7 +154,7 @@ export default class Results extends React.Component {
         <Share
           imageLoaded= { this.state.imageLoaded }
           text={ `I just got a sneak peek at @codeschool’s new course, Adventures in Web Animations, by taking this sweet quiz:` }
-          url='http://www.example.com' />
+          url='http://sweetlands.codeschool.io' />
       </div>
     );
   }
