@@ -9,6 +9,7 @@
 // -------------------------------------
 
 import React from 'react';
+import { default as cx } from 'classNames';
 
 // -------------------------------------
 //   Base
@@ -48,7 +49,10 @@ export default class Question extends React.Component {
 
   _renderAnswers() {
     var answers = this.props.answers.map( ( answer, index ) => {
-      var answerClassNames = this.state.selected && this.state.selection === answer ? 'answer-link is-selected' : 'answer-link';
+
+      var answerClassNames = cx('answer-link', {
+        'is-selected': this.state.selected && this.state.selection === answer
+      });
 
       return(
         <li key={ index } className='answer'>
