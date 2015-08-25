@@ -153,7 +153,7 @@ export default class Results extends React.Component {
         { results }
         <Share
           imageLoaded= { this.state.imageLoaded }
-          text={ `I just got a sneak peek at @codeschool’s new course, Adventures in Web Animations, by taking this sweet quiz:` }
+          text={ `I just took this sweet quiz to see which character I am from @codeschool’s Adventures in Web Animations course:` }
           url='http://sweetlands.codeschool.io' />
       </div>
     );
